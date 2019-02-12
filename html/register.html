@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Favicon -->
+  <link href="fevicon.jpg" rel="icon" type="jpg">
+  <!-- Styles -->
+  <link href="styles.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<form action="/cgi-bin/advance.cgi" method="POST">
+<div class="header">
+  <a href="index.html" class="logo" >codify</a>
+  <div class="header-right">
+  <input type="text" name="search" placeholder="Search.." style="width:100%" id="search">
+</div>
+</div>
+<div class="topnav" id="myTopnav">
+  <a href="index.html" >Home</a>
+  <a href="hosting.html">Hosting Services</a>
+ <div class="dropdown">
+    <button class="dropbtn">Cloud Services
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="ec2manage.html">EC2 Managament</a>
+      <a href="staas.html">S3 Services</a>
+       <a href="saas.html">Software service</a>
+    </div>
+  </div> 
+  <a href="exist.html">Existing Cloud</a>
+  <div class="dropdown, active">
+    <button class="dropbtn">Account
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="login.html">Login</a>
+      <a href="signup.html">Signup</a>
+    </div>
+  </div> 
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
