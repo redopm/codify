@@ -3,13 +3,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- Favicon -->
-  <link href="fevicon.jpg" rel="icon" type="jpg">
+  <link href="./img/fevicon.jpg" rel="icon" type="jpg">
   <!-- Styles -->
   <link href="styles.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<form action="/cgi-bin/advance.cgi" method="POST">
+
 <div class="header">
   <a href="index.html" class="logo" >codify</a>
   <div class="header-right">
@@ -42,8 +43,413 @@
   </div> 
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+<!--this is main body part and above is header--> 
+<div class="slideshow-container">
 
+<div class="mySlides fade  container">
+  <div class="numbertext">1 / 4</div>
+  <img src="./img/hosting1.jpg" style="width:100%">
+  <div class="text, text-block"><h1>Host your website Easly</h1><h3>We are provide cheap Hosting and Domain name. 
+In hosting you can choose your hosting which is prefer your website language and more compatible. </h3></div>
+</div>
 
+<div class="mySlides fade  container">
+  <div class="numbertext">2 / 4</div>
+  <img src="./img/hosting2.jpg" style="width:100% ">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade  container">
+  <div class="numbertext">3 / 4</div>
+  <img src="./img/hosting.jpg" style="width:100%">
+  <div class="text, text-block"><h1>Networking Infrastructure provider</h1><h3>Network infrastructure is the hardware and software resources of an entire network that enable network connectivity, communication, operations and management of an enterprise network. It provides the communication path and services between users, processes, applications, services and external networks/the internet. </h3> </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="./img/Cloud-Hosting.jpg" style="width:100%">
+  <div class="text, text-block"><h1>Cloud provider</h1><h3>A cloud service provider, or CSP, is a company that offers some component of cloud computing -- typically infrastructure as a service (IaaS), software as a service (SaaS) or platform as a service (PaaS) -- to other businesses or individuals.We are provide the best service in cloud computing technology.</h3></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!--this is service discription--> 
+<div class="row">
+  <div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/Site-Merch_Lightsail.png" alt="lightsail" style="width:100%">
+      <div class="container">
+        <b>Light-weight</b>
+        <p>Everything you need to jumpstart your project on Codify -compute, storage, and networking -for a low, predictable price.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/Site-Merch_Cloud9.png" alt="Site-Merch_Cloud9" style="width:100%">
+      <div class="container">
+        <b>Coding Plateform</b>   
+        <p>Coding Plateform is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code...</p>
+      </div>
+    </div>
+  </div>
+<div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/SiteMerch-AmazonMQ_Editorial.png" alt="SiteMerch-AmazonMQ_Editorial" style="width:100%">
+      <div class="container">
+        <b>M2C</b> 
+        <p>Migrate to Cloud is a managed connection broker service for Apache that makes it easy to set up and operate connection brokers in the cloud. </p>
+      </div>
+    </div>
+  </div>
+<div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/Site-Merch_Developer_Serverless_Editorial.png" alt="Site-Merch_Developer_Serverless_Editorial" style="width:100%">
+      <div class="container">
+        <b>Go Serverless</b>
+        <p>Serverless is the native architecture of the cloud that enables you to shift more of your operational responsibilities to codify</p>
+      </div>
+    </div>
+  </div>
+</div>
+<center><h1>Explore Our Products</h1></center>
+<div>
+<!---services are here--->
+<button class="tablink" onclick="openPage('compute', this, 'black')" id="defaultOpen"><image src="./img/Amazon EC2.svg" style="width:50px"><br>Compute</button>
+<button class="tablink" onclick="openPage('database', this, 'black')"><image src="./img/nav-icon_databases.svg" style="width:50px"><br>Database</button>
+<button class="tablink" onclick="openPage('storage', this, 'black')"><image src="./img/Amazon S3.svg" style="width:50px"><br>Storage</button>
+<button class="tablink" onclick="openPage('netwok', this, 'black')"><image src="./img/nav-icon_networking.svg" style="width:50px"><br>Networking</button>
+<button class="tablink" onclick="openPage('mobile', this, 'black')"><image src="./img/nav-icon_operating-systems.svg" style="width:50px;"><br>Mobile</button>
+<button class="tablink" onclick="openPage('ml', this, 'black')"><image src="./img/nav-icon_Machine-Learning.svg" style="width:50px"><br>Machine Learning</button>
+
+<div id="compute" class="tabcontent">
+	<table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify EC2</a>
+	  <p>virtual Servers in cloud</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Elastic Container service</a>
+	  <p>Run and manage docker cantainer</p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Elastic Load Balancer</a>
+	  <p>Distributr multiple traffic across multiple targets</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify EC2 Auto scalling</a>
+	  <p>scale compute capacity to meet demand</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="database" class="tabcontent">
+	<table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify RDS</a>
+	  <p>Managed relational database service for MYSQL,PostSQL,Oracle and MariaDB </p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify DAatabas</a>
+	  <p>High performance managed relational database</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="storage" class="tabcontent">
+	<table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify S3</a>
+	  <p>Scalable storage in the cloud</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify Elastic Block storage (EBS)</a>
+	  <p>EC2 block storage volumes</p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify S3 glacier</a>
+	  <p>Low cast archive storage  in cloud</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify backup</a>
+	  <p>Centralized backup across codify service</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="netwok" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify Ditect connection</a>
+	  <p>Dedicated network connection</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify Route 53</a>
+	  <p>Scalable Domain name service(DNS)</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="mobile" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify Os</a>
+	  <p>Install any os in cloud</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify Device Farm</a>
+	  <p>Test Android, ios, and web app on real device in codify service</p>
+	</td>
+	</table>
+</div>
+
+<div id="ml" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify Deep Learning AMIs</a>
+	  <p>Deep Learning On Codify EC2</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify Lex</a>
+	  <p>Build voice and text chatbots</p>
+	</td>
+	</tr>
+	</table>
+</div>
+</div>
+<div>
+<!---services are here--->
+<button class="tablink" onclick="openPage('developer', this, 'black')" id="defaultOpen"><image src="./img/nav-icon_dev-ops.svg" style="width:50px"><br>Developer</button>
+<button class="tablink" onclick="openPage('security', this, 'black')"><image src="./img/nav-icon_security.svg" style="width:50px"><br>Security& Identity</button>
+<button class="tablink" onclick="openPage('iot', this, 'black')"><image src="./img/CloudFront.svg" style="width:50px"><br>Internet of things</button>
+<button class="tablink" onclick="openPage('robotics', this, 'black')"><image src="./img/icon_home_robot.gif" style="width:50px"><br>Robotics</button>
+<button class="tablink" onclick="openPage('cli', this, 'black')"><image src="./img/codify CLI.svg" style="width:50px;"><br>CLI Mode</button>
+<button class="tablink" onclick="openPage('rds', this, 'black')"><image src="./img/codify RDS.svg" style="width:50px"><br>RDS</button>
+
+<div id="developer" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify cloud9</a>
+	  <p>write,run and debug code on cloud9 </p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify codestart</a>
+	  <p>Develop and deploy Application in cloud</p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify CLI</a>
+	  <p>unified tool to manage codify service</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify tool and SDKs</a>
+	  <p>Codify tool and SDKs in cloud service</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="security" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify Identity and access management</a>
+	  <p>Manage user access and encryption keys</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify shield</a>
+	  <p>DDoS Protection</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="iot" class="tabcontent">
+ <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify IoT device Management</a>
+	  <p>Onboard, organize, and remotely manage IoT devices</p>
+	</td>
+	<td>
+	<a href="ec2manage.html">Codify IoT Analytics</a>
+	  <p>Analytics for IoT device</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="robotics" class="tabcontent">
+ <table>
+	<tr>
+	<td>
+	 <a href="ec2manage.html">Codify Robomaker</a>
+	  <p>Develop, test, and deloy robotics application</p>
+	</td>
+	<td>
+	  <p>Commming soon next services...</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="cli" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="#">Codify CLI</a>
+	  <p>Command line interface to manage in the cloud</p>
+	</td>
+	<td>
+	  <p>Next service comming soon...</p>
+	</td>
+	</tr>
+	</table>
+</div>
+
+<div id="rds" class="tabcontent">
+  <table>
+	<tr>
+	<td>
+	 <a href="#l">Codify RDS</a>
+	  <p>RDS Servers in cloud</p>
+	</td>
+	</tr>
+	</table>
+</div>
+</div>
+<!--this is  above image discription-->
+  <img src="./img/work-from-home.jpg" alt="Snow" style="width:100%;">
+<!--this is  above services discription--> 
+<div <div class="contain" style="background-color: black; font-color:white;">
+<div class="row">
+  <div class="column" style="width:20%;">
+    <div class="card">
+      <img src="./img/PI-C1_Mobile_Step-1.png" alt="lightsail" style="width:70%">
+      <div class="container">
+        <b>Focusing on Customers</b>
+        <p>In 2019, Capital One had a fledgling private cloud capability and was also experimenting with Codify. In an effort to build the features its customers wanted as quickly as possible, the company chose to pursue codify.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/PI-C1_Mobile_Step-2.png" alt="Site-Merch_Cloud9" style="width:70%">
+      <div class="container">
+        <b>Doing the Hard Part First</b> 
+        <p>Security and compliance are critical to Capital One as a financial institution. To address these needs, Capital One built a cloud-risk framework and established a cloud-governance function before moving a single workload to codify. </p>
+      </div>
+    </div>
+  </div>
+<div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/PI-C1_Mobile_Step-3.png" alt="SiteMerch-AmazonMQ_Editorial" style="width:70%">
+      <div class="container">
+        <b>Education: Key to the Cloud</b>
+        <p>Capital One offers a cloud training program to engineers who work directly on codify as well as non-technical stakeholders who need to be able to advocate for the power of cloud computing. The company now ranks in the top three of all enterprises globally for codify certifications held by employees</p>
+      </div>
+    </div>
+  </div>
+<div class="column" style="width:20%">
+    <div class="card">
+      <img src="./img/PI-C1_Mobile_Step-4.png" alt="Site-Merch_Developer_Serverless_Editorial" style="width:70%">
+      <div class="container">
+        <b>Realizing the Benefits of the Cloud</b>
+        <p>Using codify, Capital One brings new products to market in weeks instead of months or years, uses machine learning to improve customer experience, and attracts top developers and engineers-all of which help the company achieve its most important goal: creating great experiences for its customers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!---this is partner--->
+<center><h1>Our Company Partner</h1></center>
+<div class="row">
+<div class="column">
+<img src="./img/nginx.PNG" style="width:30%">
+</div>
+ <div class="column">
+<img src="./img/Apache.png" style="width:30%">
+</div>
+<div class="column">
+<img src="./img/wordpress.png" style="width:30%">
+</div>
+</div>
+<div class="row">
+<div class="column">
+<img src="./img/Googlelogo.png" style="width:30%">
+</div>
+ <div class="column">
+<img src="./img/azure.png" style="width:30%">
+</div>
+<div class="column">
+<img src="./img/aws.png" style="width:30%">
+</div>
+</div>
+<div class="row">
+<div class="column">
+<img src="./img/Tomcat.png" style="width:30%">
+</div>
+ <div class="column">
+<img src="./img/redhat.png" style="width:30%">
+</div>
+<div class="column">
+<img src="./img/fedora.png" style="width:30%">
+</div>
+</div>
+<!---this is footer--->
+<div class="footer">
+<div class="column">
+<h2>Our Services</h2>
+<ol type="none">
+  <li>Best Web Hosting</li>
+  <li>Cheap VPS Hosting</li>
+  <li>Cloud Hosting</li>
+  <li>Free Web Hosting</li>
+  <li>WordPress Hosting</li>
+  <li>Ecommerce Hosting</li>
+</ol>
+</div>
+<div class="column">
+ <h2>About Us</h2>
+ <ol type="none">
+  <li>Our story</li>
+  <li>Customer care</li>
+  <li>Download App</li>
+  <li>sitemap</li>
+  <li>Privacy Policy</li>
+ </ol> 
+</div>
+<div class="column">
+<h2>Contact Us</h2>
+<ol type="none">
+  <li><h4>Email US</h4> omprakashmaury001@gmail.com</li>
+  <li><h4>Mail us</h4>  Mahaveer colony indiagate, sitapura, jaipur Rajasthan-302022</li>
+</ol> 
+</div>
+<div>
+  <p class="bottom-left">Copyright &copy; 2019 codify.</p>
+</div>
+</div>
 <script>
 function myFunction() {
   var x = document.getElementById("myTopnav");
@@ -53,15 +459,49 @@ function myFunction() {
     x.className = "topnav";
   }
 }
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+// tab creation
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
-<div class="bg-img"><h2>hi</h2>
-</div>
-<div >
-
-
-</div>
-
-
-
 </body>
 </html>

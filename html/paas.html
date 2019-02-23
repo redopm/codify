@@ -3,19 +3,21 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- Favicon -->
-  <link href="fevicon.jpg" rel="icon" type="jpg">
+  <link href="./img/fevicon.jpg" rel="icon" type="jpg">
   <!-- Styles -->
   <link href="styles.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<form action="/cgi-bin/advance.cgi" method="POST">
+<form action="">
 <div class="header">
   <a href="index.html" class="logo" >codify</a>
   <div class="header-right">
   <input type="text" name="search" placeholder="Search.." style="width:100%" id="search">
 </div>
 </div>
+<form >
 <div class="topnav" id="myTopnav">
   <a href="index.html" >Home</a>
   <a href="hosting.html">Hosting Services</a>
@@ -41,45 +43,32 @@
   </div> 
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
-
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-<body>
-<form id="regForm" action="/cgi-bin/pass.cgi">
-  <!-- One "tab" for each step in the form: -->
-  <div class="tab"><h2>Step 1: Choose Your Instance </h2>
+<form id="launchform" action="/cgi-bin/pass.cgi">
+<!-- One "tab" for each step in the form: -->
+  <div class="tab">Step 1: Choose Your Instance
    <table>
     <tr>
-    <td><img src="Windows.png" alt="windows" style="width:128px;"></td>
+    <td><img src="./img/Windows.png" alt="windows" style="width:128px;"></td>
     <td><h3>Microsoft Windows client with Standard - ami-046261055627b04cb</h3><p>Microsoft Windows 2019 Datacenter edition, Microsoft  client edition 2017 Standard. [English]</p></td>
     <td><input type="radio" name="inst" value="windows10" ></td>
     </tr>
     <tr>
-    <td><img src="ubuntu.png" alt="Ubuntu" style="width:128px;"></td>
+    <td><img src="./img/ubuntu.png" alt="Ubuntu" style="width:128px;"></td>
     <td><h3>Ubuntu Server 18.04 LTS (HVM), SSD Volume Type - ami-0d773a3b7bb2bb1c1</h3><p>Ubuntu Server 18.04 LTS (HVM),EBS General Purpose (SSD) Volume Type. Support available from Canonical (http://www.ubuntu.com/cloud/services).</p></td>
-    <td><input type="radio" name="inst"  value="ubuntu18"></td>
+    <td><input type="radio" name="inst"  value="ubuntu18" checked></td>
     </tr>
     <tr>
-    <td><img src="redhat.png" alt="Red hat 7.0" style="width:128px;"></td>
+    <td><img src="./img/redhat.png" alt="Red hat 7.0" style="width:128px;"></td>
     <td><h3>Red Hat Enterprise Linux 7.0 (HVM), SSD Volume Type - ami-5b673c34</h3><p>Red Hat Enterprise Linux version 7.0 (HVM), EBS General Purpose (SSD) Volume Type</p></td>
     <td><input type="radio" name="inst" value="redhat7"></td>
     </tr>
     <tr>
-    <td><img src="redhat.png" alt="Red hat 7.5" style="width:128px;"></td>
+    <td><img src="./img/redhat.png" alt="Red hat 7.5" style="width:128px;"></td>
     <td><h3>Red Hat Enterprise Linux 7.5 (HVM), SSD Volume Type - ami-5b673c34</h3><p>Red Hat Enterprise Linux version 7.5 (HVM), EBS General Purpose (SSD) Volume Type</p></td>
     <td><input type="radio" name="inst" value="redhat75"></td>
     </tr>
     <tr>
-    <td><img src="fedora.png" alt="Fedora" style="width:128px;"></td>
+    <td><img src="./img/fedora.png" alt="Fedora" style="width:128px;"></td>
     <td><h3>Fedora-AtomicHost-Rawhide-20181226.n.0.x86_64-hvm - ami-000268dc696e204ae</h3><p>Fedora AMI Description</p></td>
     <td><input type="radio" name="inst" value="fedora" ></td>
     </tr>
@@ -105,7 +94,7 @@ function myFunction() {
     <td>1</td>
     <td>1</td>
     
-    <td><input type="radio" name="size" value="cpu='1',ram='1024'"></td>
+    <td><input type="radio" name="size" value="cpu='1',ram='1024'" checked></td>
     </tr>
     <tr>
     <td>t2.small</td>
@@ -130,6 +119,7 @@ function myFunction() {
     </table>
   </div>
   <div class="tab">step 3: Add storage
+    
      <table>
     <tr>
     <th>Volume Type</th><th>Type</th><th>Device</th><th>Delete on Termination</th>
@@ -137,11 +127,10 @@ function myFunction() {
     <tr>
     <td>Root</td>
     <td>/dev/xsda</td>
-    <td><p><input type="number" name="hddsize" value="10"></p></td>
-    <td><input type="radio" name="inst" checked></td>
+    <td><p><input type="number" name="hddsize" value="12"></p></td>
+    <td><input type="radio" name="terminate" checked></td>
     </tr>
     </table>
-    <p>Note: If you are install Windows Please input 30 GiB Device size. </p>
   </div>
   <div class="tab">Step 4: Configure Security
     <ul>
@@ -151,11 +140,11 @@ function myFunction() {
  	<li>In the Windows os you can use the username <em>administrator</em> and password as <em>windos123@</em></li>
  	<li>In the open suse Linux os you can use the username <em>suse_user</em> and password as suse<em>123#</em></li>
 </ul>
-  </div>
+</div>
   <div style="overflow:auto;">
-    <div style="float:right;">
-      <button type="button" id="prevBtn" onclick="nextPrev(-1)" >Previous</button>
-      <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+    <div>
+      <button style="float:left; width: 30%" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      <button style="float:right; width: 30%" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
     </div>
   </div>
   <!-- Circles which indicates the steps of the form: -->
@@ -168,6 +157,16 @@ function myFunction() {
 </form>
 
 <script>
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 
@@ -178,10 +177,8 @@ function showTab(n) {
   //... and fix the Previous/Next buttons:
   if (n == 0) {
     document.getElementById("prevBtn").style.display = "none";
-    
   } else {
     document.getElementById("prevBtn").style.display = "inline";
-    
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
@@ -215,7 +212,7 @@ function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
   x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByTagName("input")
+  y = x[currentTab].getElementsByTagName("input");
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
@@ -226,35 +223,13 @@ function validateForm() {
       valid = false;
     }
   }
- 
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
   return valid; // return the valid status
 }
-function RadioForm() {
-  // This function deals with validation of the form fields
-  var x, y, i, valid = true;
-  x = document.getElementsByClassName("tab");
-  y = x[currentTab].getElementsByName("inst")
-  // A loop that checks every input field in the current tab:
-  for (i = 0; i < y.length; i++) {
-    // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false
-      valid = false;
-    }
-  }
- 
-  // If the valid status is true, mark the step as finished and valid:
-  if (valid) {
-    document.getElementsByClassName("step")[currentTab].className += " finish";
-  }
-  return valid; // return the valid status
-}
+
 function fixStepIndicator(n) {
   // This function removes the "active" class of all steps...
   var i, x = document.getElementsByClassName("step");
@@ -264,9 +239,9 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
-
 </script>
-
 
 </body>
 </html>
+
+

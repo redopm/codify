@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<form action="/cgi-bin/register.cgi" method="POST">
 <div class="header">
   <a href="index.html" class="logo" >codify</a>
   <div class="header-right">
@@ -43,27 +42,13 @@
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
-</body>
-</html>
-
 <h2>Signup Form </h2>
 <div class="imgcontainer">
-   <img src="img_avatar.jpg" alt="Avatar" class="avatar">
+   <img src="./img/img_avatar.jpg" alt="Avatar" class="avatar">
   </div>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="/cgi-bin/register.cgi" method="post">
     <label for="usrname">Username</label>
     <input type="text"  placeholder="Enter Username" id="usrname" name="usrname" required>
     <label for="email">Email ID</label>
@@ -92,6 +77,14 @@ function myFunction() {
 </div>
 				
 <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 var myInput = document.getElementById("psw");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");

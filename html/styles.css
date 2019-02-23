@@ -82,7 +82,8 @@ input[type=button] {
   width: auto;
   padding: 10px;
   margin: 5px 0 22px 0;
-  background-color: lightgreen;
+  
+  background-color: green;
 }
 /* Full-width input fields */
 input[type=submit] {
@@ -400,11 +401,11 @@ span.psw {
 .sidenav {
   height: 100%;
   width: 150px;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 80;
   left: 10;
-  background-color: lightgreen;
+  background-color: gray;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -413,7 +414,7 @@ span.psw {
   padding: 8px 10px 8px 18px;
   text-decoration: none;
   font-size: 20px;
-  color: black;
+  color: white;
   display: block;
 }
 
@@ -482,3 +483,29 @@ bg-img {
   background-image: url("cloud.img")
   background-color: #cccccc;
 }
+
+/* Style tab links */
+.tablink {
+  background-color: none;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 16.66%;
+}
+
+.tablink:hover {
+  color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 10px 20px;
+  height: 100%;
+}
+
