@@ -1,5 +1,5 @@
 # codify
-It is website which is  provide the web hosting and 
+It is website which is  provide the web hosting and private cloud platform.
 
 Command for install private cloud 
 
