@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-import cgi, cgitb, os, sys, commands
-
+import cgi, cgitb, os, sys
 
 
 UPLOAD_DIR = './upload'
@@ -47,19 +46,6 @@ def save_uploaded_file():
        </html>
       '''
 
-def syncr():
-	print  "Content-Type: text/html "
-	print  ""
-	# gettting  html data 
-	mypage=cgi.FieldStorage()
-	print "<pre>"
-	print commands.getoutput("sudo rsync -auv /tmp/systemd-private-f183c003aad445f78666caec41b4cde4-apache2.service-dKScP1/tmp /var/www/html/")
-	print "<pre>"
-	
-	
-	
-
 
 cgitb.enable()
 save_uploaded_file()
-syncr()

@@ -56,7 +56,7 @@ function myFunction() {
 </script>
 <div class="sidenav">
   <a href="ec2manage.html">EC2 Dashboard</a>
-  <a href="#services">Instance</a>
+  <a href="paas.html">Instance</a>
   <a href="#clients">Images</a>
   <a href="#contact">Hard Disk</a>
   <a href="#contact">Load Balancer</a>
@@ -69,8 +69,8 @@ function myFunction() {
 <p>You are using the following Codify EC2 resources in the Asia Pacific (Mumbai) region:</p>
 <table>
 <tr>
-<td>Running Instances</td>
-<td>Dedicated Hosts</td>
+<td><input type="button" name="running_instance" value="Running Instance"  onclick="location.href='/cgi-bin/running.cgi';"></td>
+<td><input type="button" name="dedicated_hosts" value="Dedicated Hosts"  onclick="location.href='/cgi-bin/running.cgi';"></td>
 </tr>
 <tr>
 <td>Volumes</td>
